@@ -1,0 +1,45 @@
+body {
+    color: #444
+}
+.navbar li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    color: #fff;
+}
+
+.theList li{
+    list-style: none;
+    width: 100%;
+    background: #f3f3f3;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+li[disabled]{
+    text-decoration: line-through;
+}
+
+.theList{
+    padding: 0
+}
+.created-info{
+    margin-left: 10px;
+    font-size: 11px;
+    color: #8a8a8a;
+}
+.del-btn{
+    float: right;
+}
+.delete-btn:disabled{
+    display: none;
+}
+.theList li input{
+    margin:10px;
+}
+
+.emptylist{
+    font-size: 100px;
+    opacity: 0.1;
+}
+
