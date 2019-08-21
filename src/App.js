@@ -75,35 +75,42 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-      <Router><Navbar></Navbar>
-      <Switch>
-          <Route exact path="/"  render={(props) => 
-            <Home 
-              entries={this.state.items} 
-              deleteItem={this.deleteItem}
-              completeItem={this.completeItem} />}>
-          </Route>
-          <Route exact path="/create"  render={(props) => 
-            <Create 
-              addItem={this.addItem} 
-              inputElement={this.inputElement} 
-              handleInput={this.handleInput} 
-              currentItem={this.state.currentItem}/>}>
-          </Route>
-          <Route exact path="/trash"  render={(props) => 
-            <Trash 
-              deletedItems={this.state.deletedItems}/>}>
-          </Route>
-          <Route exact path="/completed"  render={(props) => 
-            <Complete 
-              completedItems={this.state.completedItems}/>}>
-          </Route>
-         
-      </Switch>
-      </Router>
-       
-        
-        
+        <div className="row">
+          <div className="col-sm">
+            <div className="card">
+              <div className="card-body">
+                <h5>Tasks</h5>
+                <Create 
+                  addItem={this.addItem} 
+                  inputElement={this.inputElement} 
+                  handleInput={this.handleInput} 
+                  currentItem={this.state.currentItem}/>
+                <Home 
+                  entries={this.state.items} 
+                  deleteItem={this.deleteItem}
+                  completeItem={this.completeItem} />
+                </div>
+            </div>
+          </div>
+          <div className="col-sm">
+          <div className="card">
+              <div className="card-body">
+              <h5>Done</h5>
+              <Complete 
+                completedItems={this.state.completedItems}/>
+          </div>
+            </div>
+          </div>
+          <div className="col-sm">
+          <div className="card">
+              <div className="card-body">
+              <h5>Deleted</h5>
+              <Trash 
+                deletedItems={this.state.deletedItems}/>
+                </div>
+            </div>
+          </div>
+          </div>
       </div>
     )
   }

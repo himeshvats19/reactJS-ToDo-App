@@ -10,7 +10,6 @@ class Trash extends React.Component {
       list = <span className="emptylist">Empty List</span>
     }
     return <div className="todoListhome">
-       <h2>Trash(Deleted Tasks)</h2>
         {list}
         </div>
   }

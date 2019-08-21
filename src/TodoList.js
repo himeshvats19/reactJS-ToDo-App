@@ -13,13 +13,13 @@ class TodoList extends Component {
                 <input 
                     type="text" 
                     className="form-control"
-                    placeholder="Task"
+                    placeholder="Add New"
                     ref={this.props.inputElement}
                     value={this.props.currentItem.text}
                     onChange={this.props.handleInput}
                 />
                 <div className="input-group-append">
-                    <button className="btn btn-outline-secondary" type="submit"> Add Task</button>
+                    <button className="btn btn-primary" type="submit"> Add Task</button>
                 </div>
             </div>
           </form>

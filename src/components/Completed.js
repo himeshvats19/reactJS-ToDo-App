@@ -10,7 +10,6 @@ class Completed extends React.Component {
       list = <span className="emptylist">Empty List</span>
     }
     return <div className="todoListhome">
-        <h2>Completed Tasks</h2>
         {/* {console.log(this.props)} */}
         {list}
         </div>
